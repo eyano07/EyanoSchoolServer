@@ -80,6 +80,19 @@ public class GlobalExceptionHandle {
         return new ResponseEntity<>(errorObjet, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(RemoveTrueException.class)
+    public ResponseEntity<ErrorObjet> illegalArgumentException(RemoveTrueException e){
+        log.error(e.getMessage());
+        ErrorObjet errorObjet = ErrorObjet.builder()
+                .message(e.getMessage())
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .errorCode(30)
+                .date(LocalDate.now())
+                .build();
+
+        return new ResponseEntity<>(errorObjet, HttpStatus.BAD_REQUEST);
+    }
+
 
     @ExceptionHandler({ConstraintViolationException.class, MethodArgumentNotValidException.class})
     public ResponseEntity<Map<String, String>> handleValidationException(Exception ex) {

@@ -6,6 +6,7 @@ import io.eyano.eyanoschool.feesservice.entitiesService.FeesAllocationService;
 import io.eyano.eyanoschool.feesservice.exceptions.IdIsNullException;
 import io.eyano.eyanoschool.feesservice.exceptions.IdNotFoundException;
 import io.eyano.eyanoschool.feesservice.exceptions.IdNotNullException;
+import io.eyano.eyanoschool.feesservice.exceptions.RemoveTrueException;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -75,15 +76,15 @@ public class FeesAllocationController {
      * @return the entity updated
      * @throws IdNotFoundException : if the id of the entity is not found
      * @throws IdIsNullException : if the id of the entity is null
+     * @throws RemoveTrueException : if the entity is deleted
      */
     @PutMapping("/feesAllocations")
     @Tag(name = "Fees Allocation", description = "Update an entity in the database.")
-    public FeesAllocationDto update(@RequestBody @Valid FeesAllocationDto feesAllocationDto) throws IdNotFoundException, IdIsNullException, IdNotNullException {
+    public FeesAllocationDto update(@RequestBody @Valid FeesAllocationDto feesAllocationDto) throws IdNotFoundException, IdIsNullException, IdNotNullException, RemoveTrueException {
         log.info("execution of the method:update(FeesAllocationDto) parameter : "+feesAllocationDto);
-        if(feesAllocationDto.getId() == null){
-            throw new IdIsNullException("The id of the payment is null");
+        if(feesAllocationDto.isRemove()){
+            throw new RemoveTrueException();
         }
-        //todo: suppression getRemove
         FeesAllocationDto result = feesAllocationService.update(feesAllocationDto);
         log.info("end of execution of the method:update(FeesAllocationDto) parameter : "+result);
         return result;
