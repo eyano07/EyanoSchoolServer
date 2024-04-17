@@ -1,6 +1,7 @@
 package io.eyano.eyanoschool.feesservice.exceptions;
 
 import jakarta.validation.ConstraintViolationException;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.internal.engine.path.PathImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,9 +15,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ControllerAdvice
+@Slf4j
 public class GlobalExceptionHandle {
     @ExceptionHandler(IdNotFoundException.class)
     public ResponseEntity<ErrorObjet> handleIdNotFoundException(IdNotFoundException e){
+        log.error(e.getMessage());
         ErrorObjet errorObjet = ErrorObjet.builder()
                 .message(e.getMessage())
                 .statusCode(HttpStatus.NOT_FOUND.value())
@@ -28,6 +31,7 @@ public class GlobalExceptionHandle {
     }
     @ExceptionHandler(IdNotNullException.class)
     public ResponseEntity<ErrorObjet> handleIdNotFoundException(IdNotNullException e){
+        log.error(e.getMessage());
         ErrorObjet errorObjet = ErrorObjet.builder()
                 .message(e.getMessage())
                 .statusCode(HttpStatus.NOT_FOUND.value())
@@ -40,6 +44,7 @@ public class GlobalExceptionHandle {
 
     @ExceptionHandler(IdIsNullException.class)
     public ResponseEntity<ErrorObjet> handleIdIsFoundException(IdIsNullException e){
+        log.error(e.getMessage());
         ErrorObjet errorObjet = ErrorObjet.builder()
                 .message(e.getMessage())
                 .statusCode(HttpStatus.NOT_FOUND.value())
@@ -52,6 +57,7 @@ public class GlobalExceptionHandle {
 
     @ExceptionHandler(IdNotFoundParamException.class)
     public ResponseEntity<ErrorObjet> handleIdNotFoundException(IdNotFoundParamException e){
+        log.error(e.getMessage());
         ErrorObjet errorObjet = ErrorObjet.builder()
                 .message(e.getMessage())
                 .statusCode(HttpStatus.NOT_FOUND.value())
@@ -63,6 +69,7 @@ public class GlobalExceptionHandle {
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorObjet> illegalArgumentException(IllegalArgumentException e){
+        log.error(e.getMessage());
         ErrorObjet errorObjet = ErrorObjet.builder()
                 .message(e.getMessage())
                 .statusCode(HttpStatus.BAD_REQUEST.value())
@@ -76,6 +83,7 @@ public class GlobalExceptionHandle {
 
     @ExceptionHandler({ConstraintViolationException.class, MethodArgumentNotValidException.class})
     public ResponseEntity<Map<String, String>> handleValidationException(Exception ex) {
+        log.error(ex.getMessage());
         Map<String, String> errors = new HashMap<>();
 
         if (ex instanceof ConstraintViolationException) {

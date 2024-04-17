@@ -19,6 +19,9 @@ import java.util.List;
  * @author : Pascal Tshingila
  * @since : 2021-04-19
  * @version : 1.0
+ * @see CrudService
+ * @see FeesAllocationDto
+ * @see FeesAllocation
  */
 @Service @Transactional
 @AllArgsConstructor @Slf4j
@@ -27,18 +30,32 @@ public class FeesAllocationService implements CrudService<FeesAllocationDto, Lon
     FeesAllocationMapper mapper;
 
     /**
+        * This method finds an entity in the database
+        * @param id : the id of the entity to find
+        * @return FeesAllocationDto : the entity found
+        * @throws IdNotFoundException : if the entity is not found
+        * @throws IdIsNullException : if the id is null
+     */
+    public FeesAllocationDto findById(Long id) throws IdNotFoundException, IdIsNullException {
+        log.info("execution of the method:findById(Long id)") ;
+        if(id==null){
+            throw new IdIsNullException("The id is null");
+        }
+        FeesAllocation byId = feesAllocationRepository.findById(id).orElseThrow(IdNotFoundException::new);
+        FeesAllocationDto feesAllocationDto = mapper.entityFromDTO(byId);
+        log.info("end of method execution:findById(Long id)") ;
+        return feesAllocationDto;
+    }
+
+    /**
         * This method saves an entity in the database
         * @param entity : the entity to save
         * @return the entity saved
      */
     @Override
-    public FeesAllocationDto save(FeesAllocationDto entity) throws IdIsNullException, IdNotNullException {
-        log.info("execution of the method:save(FeesAllocationDto entity)") ;
+    public FeesAllocationDto save(FeesAllocationDto entity){
+        log.info("execution of the method:save(FeesAllocationDto entity) : {"+entity+"}") ;
         FeesAllocation feesAllocation = mapper.dtoFromEntity(entity);
-        if(feesAllocation.getTypeFees().getId()==null){
-            throw new IdIsNullException("The id type fees is null");
-        }
-
         FeesAllocation feesAllocationSave = feesAllocationRepository.save(feesAllocation);
         FeesAllocationDto feesAllocationDto = mapper.entityFromDTO(feesAllocationSave);
         log.info("the creation of the entity : {"+ feesAllocationDto.toString()+"}");
@@ -49,16 +66,17 @@ public class FeesAllocationService implements CrudService<FeesAllocationDto, Lon
         * @param entity : the entity to update
         * @return the entity updated
         * @throws IdNotFoundException : if the entity is not found
+        * @throws IdIsNullException : if the id is null
      */
     @Override
-    public FeesAllocationDto update(FeesAllocationDto entity) throws IdNotFoundException, IdIsNullException, IdNotNullException {
-        log.info("execution of the method:update(FeesAllocationDto entity)") ;
+    public FeesAllocationDto update(FeesAllocationDto entity) throws IdIsNullException, IdNotFoundException {
+        log.info("execution of the method:update(FeesAllocationDto entity) : {"+entity+"}" ) ;
         if(entity.getId()==null){
             throw new IdIsNullException("The id is null");
         }
         feesAllocationRepository.findById(entity.getId()).orElseThrow(IdNotFoundException::new);
         FeesAllocationDto feesAllocationDto = save(entity);
-        log.info("entity update : {" +feesAllocationDto+"}");
+        log.info("entity update : {" +feesAllocationDto.toString()+"}");
         return feesAllocationDto;
     }
 
@@ -272,4 +290,6 @@ public class FeesAllocationService implements CrudService<FeesAllocationDto, Lon
         log.info("end of method execution:findByIdAndRemoveIsTrue(Long aLong)") ;
         return byIdAndRemoveIsTrue;
     }
+
+
 }

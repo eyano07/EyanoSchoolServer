@@ -2,14 +2,15 @@ package io.eyano.eyanoschool.feesservice.web;
 
 import io.eyano.eyanoschool.feesservice.dtos.FeesAllocationDto;
 import io.eyano.eyanoschool.feesservice.entities.FeesAllocation;
+import io.eyano.eyanoschool.feesservice.entitiesService.FeesAllocationService;
 import io.eyano.eyanoschool.feesservice.exceptions.IdIsNullException;
 import io.eyano.eyanoschool.feesservice.exceptions.IdNotFoundException;
 import io.eyano.eyanoschool.feesservice.exceptions.IdNotNullException;
-import io.eyano.eyanoschool.feesservice.entitiesService.FeesAllocationService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -32,17 +33,36 @@ public class FeesAllocationController {
     FeesAllocationService feesAllocationService;
 
     /**
+     * This method retrieves an entity from the database using its identifier
+     * @param id : the id of the entity to retrieve
+     * @return the entity found
+     * @throws IdIsNullException : if the id of the entity is null
+     * @throws IdNotFoundException : if the id of the entity is not found
+     */
+    @GetMapping("/feesAllocations/{id}")
+    @Tag(name = "Fees Allocation", description = "Get an entity using its identifier (ID)")
+    @ResponseStatus(HttpStatus.OK)
+    public FeesAllocationDto getById(Long id) throws IdIsNullException, IdNotFoundException {
+        log.info("execution of the method:getById(Long) parameter : "+id);
+        FeesAllocationDto result = feesAllocationService.findById(id);
+        log.info("end of execution of the method:getById(Long) parameter : "+result);
+        return result;
+    }
+
+    /**
      * This method saves an entity in the database
      * @param feesAllocationDto : the entity to save
      * @return the entity saved
      * @throws IdNotNullException : if the id of the entity is not null
+     * @throws IdIsNullException : if the id of the entity is null
      */
     @PostMapping("/feesAllocations")
     @Tag(name = "Fees Allocation", description = "Register an entity in the database.")
+    @ResponseStatus(HttpStatus.CREATED)
     public FeesAllocationDto save(@RequestBody @Valid FeesAllocationDto feesAllocationDto) throws IdNotNullException, IdIsNullException {
         log.info("execution of the method:save(FeesAllocationDto) parameter : "+feesAllocationDto);
         if(feesAllocationDto.getId() != null){
-            throw new IdNotNullException("The id of the payment is not null");
+            throw new IdNotNullException("The id of the fees allocation is not null");
         }
         feesAllocationDto.setRemove(false);
         FeesAllocationDto result = feesAllocationService.save(feesAllocationDto);

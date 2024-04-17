@@ -5,136 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d1fc830-56da-4928-8dd5-0d7a47728936" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/src/main/java/io/eyano/eyanoschool/discoveryservice/DiscoveryServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discovery-Service/src/test/java/io/eyano/eyanoschool/discoveryservice/DiscoveryServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/FessServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dao/FeesAllocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dao/FeesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dao/PaymentRegistrationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dao/PaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dao/SliceFeesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dao/TypeFeesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dtos/FeesAllocationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dtos/FeesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dtos/PaymentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dtos/PaymentRegistrationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dtos/SliceFeesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/dtos/TypeFeesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entities/Fees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entities/FeesAllocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entities/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entities/PaymentRegistration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entities/SliceFees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entities/TypeFees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesExt/ClassFees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesExt/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesExt/PaymentSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesExt/Pupil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesExt/RateDollar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesExt/SchoolYear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesService/CrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesService/FeesAllocationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesService/FeesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesService/PaymentRegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesService/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesService/SliceFeesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/entitiesService/TypeFeesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/enums/PaymentMethode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/exceptions/ErrorObjet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/exceptions/GlobalExceptionHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/exceptions/IdIsNullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/exceptions/IdNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/exceptions/IdNotFoundParamException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/exceptions/IdNotNullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/mappers/FeesAllocationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/mappers/FeesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/mappers/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/mappers/PaymentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/mappers/PaymentRegistrationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/mappers/SliceFeesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/mappers/TypeFeesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/web/FeesAllocationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/web/FeesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/web/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/web/PaymentRegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/web/SliceFeesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/java/io/eyano/eyanoschool/feesservice/web/TypeFeesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/test/java/io/eyano/eyanoschool/feesservice/FessServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fees-Service/src/test/java/io/eyano/eyanoschool/feesservice/TestFessServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/FinancialServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/dao/CurrencyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/dao/PaymentSystemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/dao/RateDollarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/dtos/CurrencyDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/dtos/PaymentSystemDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/dtos/RateDollarDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entities/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entities/PaymentSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entities/RateDollar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/ClassFees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/Fees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/PaymentRegistration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/Pupil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/SchoolYear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/SliceFees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesExt/TypeFees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesService/CrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesService/CurrencyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesService/PaymentSystemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/entitiesService/RateDollarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/enums/PaymentMethode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/exceptions/ErrorObjet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/exceptions/GlobalExceptionHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/exceptions/IdIsNullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/exceptions/IdNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/exceptions/IdNotFoundParamException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/exceptions/IdNotNullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/mappers/CurrencyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/mappers/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/mappers/PaymentSystemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/mappers/RateDollarMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/web/CurrencyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/web/PaymentSystemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/java/io/eyano/eyanoschool/financialservice/web/RateDollarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/test/java/io/eyano/eyanoschool/financialservice/FinancialServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Financial-Service/src/test/java/io/eyano/eyanoschool/financialservice/TestFinancialServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/src/main/java/io/eyano/eyanoschool/getwayservice/GetwayServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Getway-Service/src/test/java/io/eyano/eyanoschool/getwayservice/GetwayServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Fees-Service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -172,7 +44,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "22",
-    "last_opened_file_path": "E:/EYANO/EyanoSchool-Server/Fees-Service/src/main/java/io/eyano/eyanoschool/fessservice",
+    "last_opened_file_path": "E:/EYANO/EyanoSchoolServer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -249,6 +121,7 @@
       <workItem from="1713186843055" duration="2693000" />
       <workItem from="1713204487292" duration="2816000" />
       <workItem from="1713351993468" duration="4022000" />
+      <workItem from="1713360423336" duration="4638000" />
     </task>
     <servers />
   </component>
