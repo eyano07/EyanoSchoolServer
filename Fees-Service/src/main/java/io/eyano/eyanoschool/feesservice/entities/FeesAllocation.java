@@ -4,6 +4,12 @@ import io.eyano.eyanoschool.feesservice.entitiesExt.SchoolYear;
 import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * This class represents the FeesAllocation table in the database
+ * @Author : Pascal Tshingila
+ * @Since : 02/02/2021
+ * @Version : 1.0
+ */
 @Entity
 @AllArgsConstructor @NoArgsConstructor @Getter @Setter @Builder @ToString
 public class FeesAllocation {
@@ -11,7 +17,7 @@ public class FeesAllocation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 150, nullable = false)
+    @Column(length = 50, nullable = false)
     private String designation;
 
     @Column(nullable = false)
@@ -20,11 +26,13 @@ public class FeesAllocation {
     //From the utility module
     @Transient
     private SchoolYear schoolYear;
+    @Column(nullable = false)
     private Long idSchoolYear;
 
     @ManyToOne
     private TypeFees typeFees;
 
     //Attribute to allow removing an entity
+    @Column(nullable = false)
     private boolean remove;
 }
