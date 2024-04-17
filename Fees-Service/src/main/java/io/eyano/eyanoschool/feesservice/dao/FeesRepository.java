@@ -15,7 +15,9 @@ import java.util.Optional;
  * @version : 1.0
  */
 public interface FeesRepository extends JpaRepository<Fees, Long> {
-    //find all fees that are not removed all fees
+    /**find all fees that are not removed all fees
+     * @return List of fees
+     */
     List<Fees> findFeesByRemoveIsFalse();
     //find all fees that are removed
     List<Fees> findFeesByRemoveIsTrue();

@@ -13,7 +13,28 @@ import java.util.Optional;
  * @author : Pascal Tshingila
  */
 public interface FeesAllocationRepository  extends JpaRepository<FeesAllocation, Long> {
+    /**
+     * This method is used to find all fee allocations by id
+     * @return List of fees allocations
+     */
+    Optional<FeesAllocation> findByIdAndRemoveIsFalse(Long id);
+    /**
+     * This method is used to find all fee allocations that are removed
+     * @return List of fees allocations
+     */
+    Optional<FeesAllocation> findByIdAndRemoveIsTrue(Long id);
 
+    /**
+     * This method is used to find all fee allocations
+     * @return List of fees allocations
+     */
+    List<FeesAllocation> findByRemoveIsFalse();
+    /**
+     * This method is used to find all fee allocations
+     * @return List of fees allocations
+     */
+    List<FeesAllocation> findByRemoveIsTrue();
+//-----------------------------------------------------------------------------------------------------------------
     /**
      * This method is used to find all fee allocations by tag and school year
      * @return List of fees allocations
@@ -24,16 +45,7 @@ public interface FeesAllocationRepository  extends JpaRepository<FeesAllocation,
      * @return List of fees allocations
      */
     List<FeesAllocation> findByRemoveTrueAndDesignationContainsAndIdSchoolYear(String tag, Long idSchoolYear);
-    /**
-     * This method is used to find all fee allocations
-     * @return List of fees allocations
-     */
-    List<FeesAllocation> findByRemoveIsFalse();
-    /**
-     * This method is used to find all fee allocations by id
-     * @return List of fees allocations
-     */
-    Optional<FeesAllocation> findByIdAndRemoveIsFalse(Long id);
+
     /**
      * This method is used to find all fee allocations by tag, school year and id type of fees
      * @return List of fees allocations
@@ -44,9 +56,5 @@ public interface FeesAllocationRepository  extends JpaRepository<FeesAllocation,
      * @return List of fees allocations
      */
     List<FeesAllocation> findByRemoveTrueAndDesignationContainsAndIdSchoolYearAndTypeFeesId(String tag, Long idSchoolYear, Long idTypeFees);
-    /**
-     * This method is used to find all fee allocations that are removed
-     * @return List of fees allocations
-     */
-    Optional<FeesAllocation> findByIdAndRemoveIsTrue(Long id);
+
 }
