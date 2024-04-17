@@ -108,6 +108,8 @@ public class FeesAllocationService implements CrudService<FeesAllocationDto, Lon
         * @param id : the id of the entity to delete
         * @return boolean : true if the entity is deleted
         * @throws IdNotFoundException : if the entity is not found
+        * @throws IdIsNullException : if the id is null
+        * @throws IdNotNullException : if the id is not null
      */
     @Override
     public boolean removeById(Long id) throws IdNotFoundException, IdIsNullException, IdNotNullException {

@@ -117,6 +117,8 @@ public class FeesAllocationController {
      * @param feesAllocationDto : the entity to delete
      * @return a map containing the id of the entity deleted and the result of the operation
      * @throws IdNotFoundException : if the id of the entity is not found
+     * @throws IdIsNullException : if the id of the entity is null
+     * @throws IdNotNullException : if the id of the entity is not null
      */
     @DeleteMapping("/feesAllocations")
     @Tag(name = "Fees Allocation", description = "Delete an entity")
