@@ -94,10 +94,12 @@ public class FeesAllocationController {
      * @param id : the id of the entity to delete
      * @return a map containing the id of the entity deleted and the result of the operation
      * @throws IdNotFoundException : if the id of the entity is not found
+     * @throws IdIsNullException : if the id of the entity is null
+     * @throws IdNotNullException : if the id of the entity is not null
      */
     @DeleteMapping("/feesAllocations/{id}")
     @Tag(name = "Fees Allocation", description = "Delete an entity using its identifier (ID)")
-    public Map<String, String> removeById(@PathVariable("id") Long id) throws IdNotFoundException, IdIsNullException, IdNotNullException {
+    public Map<String, String> removeById(@PathVariable("id") Long id) throws IdIsNullException, IdNotFoundException, IdNotNullException {
         log.info("execution of the method:removeById(Long) parameter : "+id);
         Map<String,String> map = new HashMap<>();
         FeesAllocationDto feesAllocationDto = feesAllocationService.findByIdAndRemoveIsFalse(id);

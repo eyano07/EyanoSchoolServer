@@ -86,17 +86,18 @@ public class FeesAllocationService implements CrudService<FeesAllocationDto, Lon
         * @param entity : the entity to delete
         * @return the entity deleted
         * @throws IdNotFoundException : if the entity is not found
+        * @throws IdIsNullException : if the id is null
+        * @throws IdNotNullException : if the id is not null
      */
     @Override
     public boolean remove(FeesAllocationDto entity) throws IdNotFoundException, IdIsNullException, IdNotNullException {
         log.info("execution of the method:remove(FeesAllocationDto entity)") ;
-        if(entity.getId()==null){
+        if (entity.getId()==null){
             throw new IdIsNullException("The id is null");
         }
         FeesAllocation feesAllocation = feesAllocationRepository.findById(entity.getId()).orElseThrow(IdNotFoundException::new);
         FeesAllocationDto feesAllocationDto = mapper.entityFromDTO(feesAllocation);
         feesAllocationDto.setRemove(true);
-
         boolean remove = update(feesAllocationDto).isRemove();
         log.info("the entity : {"+ feesAllocationDto+"} is deleted in the database");
         return remove;
