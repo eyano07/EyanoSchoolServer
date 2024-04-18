@@ -44,7 +44,7 @@ public interface FeesAllocationRepository  extends JpaRepository<FeesAllocation,
      * This method is used to find all fee allocations by tag and school year that are removed
      * @return List of fees allocations
      */
-    List<FeesAllocation> findByRemoveTrueAndDesignationContainsAndIdSchoolYear(String tag, Long idSchoolYear);
+    List<FeesAllocation> findByRemoveTrueAndDesignationIgnoreCaseContainsAndIdSchoolYear(String tag, Long idSchoolYear);
 
     /**
      * This method is used to find all fee allocations by tag, school year and id type of fees
