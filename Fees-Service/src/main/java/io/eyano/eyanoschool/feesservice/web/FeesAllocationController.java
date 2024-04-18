@@ -142,9 +142,12 @@ public class FeesAllocationController {
      */
     @GetMapping("/feesAllocations/restore/{id}")
     @Tag(name = "Fees Allocation", description = "Restore an entity using its identifier (ID)")
-    public Map<String,String> restore(@PathVariable("id") Long id) throws IdNotFoundException, IdIsNullException, IdNotNullException {
+    public Map<String,String> restore(@PathVariable("id") Long id) throws IdIsNullException, IdNotNullException, IdNotFoundException {
         log.info("execution of the method:restore(Long) parameter : "+id);
         Map<String,String> map = new HashMap<>();
+        if(id == null){
+            throw new IdIsNullException("The id of the fees allocation is null");
+        }
         FeesAllocationDto feesAllocationDto = feesAllocationService.findByIdAndRemoveIsTrue(id);
         boolean result = feesAllocationService.restore(id);
         map.put("Restored entity","FeesAllocation");
