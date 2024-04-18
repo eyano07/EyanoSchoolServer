@@ -214,10 +214,10 @@ public class FeesAllocationService implements CrudService<FeesAllocationDto, Lon
     public List<FeesAllocationDto> findByRemoveFalseAndDesignationContainsAndIdSchoolYear(String tag, Long idSchoolYear) throws IdIsNullException {
         log.info("execution of the method:findByRemoveFalseAndDesignationContainsAndIdSchoolYear(String tag, Long idSchoolYear)") ;
         if(idSchoolYear==null){
-            throw new IdIsNullException("The id is null");
+            throw new IdIsNullException("The id school year is null");
         }
         //todo: add test for school year id is exist
-        List<FeesAllocationDto> byRemoveFalseAndDesignationContainsAndIdSchoolYear = mapper.entitiesFromDtos(feesAllocationRepository.findByRemoveFalseAndDesignationContainsAndIdSchoolYear(tag, idSchoolYear));
+        List<FeesAllocationDto> byRemoveFalseAndDesignationContainsAndIdSchoolYear = mapper.entitiesFromDtos(feesAllocationRepository.findByRemoveFalseAndDesignationIgnoreCaseContainsAndIdSchoolYear(tag, idSchoolYear));
         log.info("end of method execution:findByRemoveFalseAndDesignationContainsAndIdSchoolYear(String tag, Long idSchoolYear)") ;
         return byRemoveFalseAndDesignationContainsAndIdSchoolYear;
     }
